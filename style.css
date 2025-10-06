@@ -1,0 +1,439 @@
+/*
+ * hero-section
+ */
+
+/* Estilos para a seção principal, com o carrossel de fundo */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa a altura total da tela */
+    overflow: hidden;
+}
+
+/* Garante que o carrossel ocupe a altura total */
+#heroCarousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+/* Estilo para as imagens de fundo do carrossel */
+.hero-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço do container */
+    filter: brightness(0.5); /* Escurece a imagem para destacar o texto */
+    transition: transform 0.8s ease-in-out; /* Adiciona uma transição para a imagem */
+}
+
+/* Conteúdo sobreposto, alinhado à esquerda */
+.hero-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Fica acima do carrossel */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    padding: 0 20px; /* Adiciona padding lateral para telas menores */
+}
+
+/* Contêiner de texto alinhado à esquerda */
+.hero-text-box {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o texto */
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Transição para o texto aparecer suavemente */
+    transition: opacity 0.5s ease;
+    
+}
+
+/* Estilo do título principal */
+.hero-text-box h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #76adff;
+
+}
+
+/* Estilo do subtítulo */
+.hero-text-box p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+/* Estilos dos botões do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Aumenta a opacidade no hover */
+}
+
+/* Responsividade do texto para telas menores */
+@media (max-width: 768px) {
+    .hero-text-box {
+        padding: 2rem;
+    }
+
+    .hero-text-box h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text-box p {
+        font-size: 1.2rem;
+    }
+}
+/* Estilos para a seção principal, com a imagem de fundo */
+
+
+
+.content-container {
+    position: relative;
+    z-index: 2; /* Fica acima da imagem de fundo */
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-card {
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com transparência */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para o cartão */
+    max-width: 700px;
+}
+
+.custom-card h1 {
+    font-weight: 700;
+}
+
+.custom-card p {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Efeito de Hover e Sombra na Navbar */
+.navbar-nav .nav-item .nav-link {
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent; /* Linha transparente na parte inferior */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #0d6efd; /* Cor principal do Bootstrap para destacar */
+    border-color: #0d6efd; /* Adiciona uma linha na parte inferior no hover */
+    transform: translateY(-2px); /* Efeito de "levantar" no hover */
+}
+
+/* Sombra para o footer (opcional) */
+footer {
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para links do footer */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0d6efd !important;
+
+}
+.projects-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Sombra e acabamentos para o carrossel */
+.carousel-inner {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de hover nos botões do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Tamanho dos ícones de navegação */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+}
+.budgets-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Efeito de hover para o botão */
+.custom-btn-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-btn-hover:hover {
+    transform: translateY(-3px); /* Levanta o botão no hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+}
+/*
+/*
+ * Estilos para a Seção de Serviços
+ */
+
+/* Contêiner principal da seção */
+.services-section {
+    position: relative; /* Essencial para que o fundo seja posicionado corretamente */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Nova classe para a imagem de fundo */
+.section-background-image {
+    position: absolute; /* Posição absoluta em relação ao pai (.services-section) */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a seção sem distorcer */
+    z-index: 1; /* Coloca a imagem no fundo */
+    filter: brightness(0.5); /* Escurece a imagem para dar contraste ao texto */
+}
+
+/* Estilos para os cards de serviço */
+.service-card {
+    position: relative; /* O card deve ficar acima do fundo */
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Efeito de hover para os cards */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para as imagens dos cards */
+.service-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+/*
+ * project-gallery-section
+ */
+
+/* Contêiner principal da seção */
+.project-gallery-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Imagem de fundo controlada pelo CSS */
+.project-gallery-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://placehold.co/1920x1080/c88a8d/ffffff?text=Fundo+Galeria+Projetos');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Escurece a imagem para destacar o conteúdo */
+    z-index: 1;
+}
+
+/* Item da galeria (com hover) */
+.project-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.03); /* Aumenta um pouco no hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de sobreposição (overlay) no hover */
+.project-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.project-item .view-icon {
+    font-size: 2.5rem;
+    color: white;
+}
+.budgets-background-image {
+    position: absolute; /* Posição absoluta em relação ao pai (.services-section) */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a seção sem distorcer */
+    z-index: 1; /* Coloca a imagem no fundo */
+    filter: brightness(0.5); /* Escurece a imagem para dar contraste ao texto */
+}
+/*
+ * about-me-section
+ */
+
+/* Container principal com imagem de fundo */
+.about-me-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5rem 0; /* Espaçamento interno para dispositivos móveis */
+}
+
+/* Imagem de fundo da seção */
+.about-me-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://placehold.co/1920x1080/4e4a5d/ffffff?text=Fundo+Sobre+Mim');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4); /* Escurece a imagem para dar destaque ao conteúdo */
+    z-index: 1;
+}
+
+/* Container de conteúdo, mais largo e centralizado */
+.about-me-content-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 3rem;
+    max-width: 1200px; /* Define a largura máxima */
+    margin: auto; /* Centraliza o container */
+}
+
+/* Container do texto para dar um fundo semi-transparente */
+.about-me-text-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* Estilo para a imagem do modelo */
+.about-me-model-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsividade para alinhar os elementos em telas menores */
+@media (max-width: 768px) {
+    .about-me-content-container {
+        padding: 2rem;
+    }
+}
+.botao_principal {
+  /* Estilo base do botão */
+  background-color: #ffffff; /* Azul padrão */
+  color: #fff; /* Texto branco */
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Transparência inicial */
+  opacity: 0.9;
+}
+
+.botao_principal:hover {
+  /* Animação hover */
+  background-color: #47a0ff; /* Um azul um pouco mais escuro no hover */
+  transform: translateY(-3px); /* Levanta o botão suavemente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+  
+  /* Aumenta a transparência sutilmente no hover para o efeito de "brilho" */
+  opacity: 1; 
+}
+
+.botao_principal:active {
+  /* Efeito de clique */
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.botao_principal a {
+    font-family:Arial, Helvetica, sans-serif, Arial, sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.2cap;
+}
+.botao_principal a:hover {
+    font-family:Arial, Helvetica, sans-serif, Arial, sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.2cap;
+    color: #ffffff;
+}
